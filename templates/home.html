@@ -1,62 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cristopher Bago Careers</title> 
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <style>
-        h1 {
-            font-style: 40px;
-            font-family: Roboto;
-            font font-weight: normal;
-            color: rgb(50,50,50);
-            text-align: center;
-        }
 
         #banner {
-           width: 100%;
-          height:360px;
-          object-fit:cover;
+            height: 360px;
+            width: 100%;
           
         }
-
-      h2 {
-        font-style: 40px;
-        font-family: Roboto;
-        font font-weight: normal;
-        color: rgb(50,50,50);
-        text-align: center;
-        
-      }
-      bodytext{
-        
-        font-family: Roboto;
-        color: rgb(80,80,80);
-        
-      }
-    #container{
-      max-width: 720px
-      margin:0 auto;
-    }
       
     </style>
-</head>
+
+    
+    <div class="container">
+    <title>Cristopher Bago Careers</title> 
+    
+    </head>
 <body>
   Hello! you will learn about the job openings at Cristopher Bago here.
 
-  <div tag="container">
-  <h1 class="text-center mt-2 mb-4">Cristopher Careers</h1>
-  <img id="banner" src="https://37b6c1e5-555b-4f66-a6c8-1ed639addf5f-00-3m2wqqmbj4xmc.sisko.replit.dev/static/banner.jpeg" >
+  
+  <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+  <img class="img-fluid" id="banner" src="https://37b6c1e5-555b-4f66-a6c8-1ed639addf5f-00-3m2wqqmbj4xmc.sisko.replit.dev/static/banner.jpeg" >
 
-  <h2 class="text-center mt-2 mb-4>About Cristopher</h2>
-  <p class="bodytext">
+  <h2 >About Cristopher</h2>
+  <p >
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elit sem, finibus ut facilisis pretium, consequat nec ante. Quisque consequat tristique sem, vel finibus dui dictum at. Sed fringilla risus vel consequat sagittis. Maecenas a malesuada sem. Suspendisse neque dolor, finibus eget nunc vitae, suscipit mollis libero. Integer euismod ligula in lorem lacinia, nec tempor tellus porta. Quisque molestie, dolor sed mollis tincidunt, eros ligula molestie arcu, eget condimentum nibh dui eu leo. Vivamus ultricies a sapien vitae varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec rutrum laoreet urna ac iaculis. Vivamus vel odio volutpat, aliquam nisi at, tempus urna. Maecenas rhoncus venenatis libero, in dictum turpis finibus eget. Aliquam sit amet risus suscipit, volutpat velit sit amet, cursus metus. Nam eget augue non libero efficitur tempus nec non elit. Vestibulum imperdiet sollicitudin consectetur. Mauris tellus risus, pharetra fermentum nisi sit amet, malesuada mollis ex.
   
   </p>
-  <h3 class="text-center mt-2 mb-4">Open Job Positions </h3>
-      <p class="bodytext">TODO - Show the jobs here</p>
-    <div style="text-align:center;">
-      <button class="btn btn-primary btn-lg"">Contact Us</button>
-      <p class="mt-4">Copywright 2024, Cristopher</p>
+  
+  <h3 class='text-center'>Open Job Positions </h3>
+  <div> 
+    {% for job in jobs %}
+      {% include 'jobitem.html' %}
+    {% endfor %}
     </div>
-    </div>
+  
+  <div style='text-align:center;'>
+      <button class='btn btn-primary btn-lg'>Contact Us</button>
+      <p class='text-center mt-4'>Copywright 2024, Cristopher</p>
+  </div>
+</div>
   </body>
 </html>
